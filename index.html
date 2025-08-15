@@ -1524,7 +1524,7 @@ select {
 }
 
 .footer .superfinanciera-img {
-    left: 30px;
+    left: 10px;
     position: absolute;
     max-width: 100px; /* Ajustar según necesites */
     height: auto;
@@ -1695,11 +1695,12 @@ select {
         margin-top: 0;
     }
     .footer .superfinanciera-img {
-        position: static;
-        margin: 1rem auto;
-        display: block;
-        max-width: 80px;
-        left: 10px;
+             position: absolute;
+        left: 10px; /* Reducir el margen izquierdo en móvil */
+        top: 20px; /* Ajustar posición vertical */
+        max-width: 80px; /* Reducir tamaño en móvil */
+        margin: 0; /* Eliminar márgenes */
+         
     }
 }
 
@@ -2279,7 +2280,7 @@ textarea::-ms-input-placeholder {
 
 <!-- Footer Section -->
 <footer class="footer">
-    <div style="left:30px; position: absolute;"><img src="images/superfinanciera.png" alt="Superfinanciera"/></div>
+    <div style="left:10px; position: absolute;"><img src="images/superfinanciera.png" alt="Superfinanciera"/></div>
     <div class="footer-container">
         <div class="footer-column mobile-dropdown">
             <h4 class="dropdown-title">AXA COLPATRIA y tú <i class="icon-axa-fu006 dropdown-arrow"></i></h4>
