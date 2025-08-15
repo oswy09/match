@@ -248,80 +248,720 @@ font-family: 'Publico Headline Web';
 /* ================================ */
 /* 6. Por Qué Trabajar con Nosotros */
 /* ================================ */
-.why-work {
-    background-color: #35558A;
-    color: #fff;
-    padding: 4rem 2rem;
-    text-align: center;
-}
 
-.why-work h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-}
+  /* Contenedor principal para toda la sección */
+        .scroll-section-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            position: relative;
+            /* Eliminar estas propiedades que causaban el desplazamiento */
+            width: auto;           /* Eliminar width: 100vw */
+            margin-left: auto;     /* Eliminar margin-left: calc(-50vw + 50%) */
+            margin-right: auto;    /* Eliminar margin-right: calc(-50vw + 50%) */
+            padding: 0 20px;       /* Agregar padding horizontal */
+        }
 
-.why-subtitle {
+        /* Sección del encabezado con título e iconos */
+        .header-section-content {
+            width: 100%;
+            margin: 0 auto;
+            padding: 4rem 20px;
+            box-sizing: border-box;
+            /* Eliminar estas propiedades */
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #f0f8ff;
+            border-radius: 10px;
+        }
+
+        /* Estilos para la cápsula de "Tu carrera profesional" */
+        .professional-career-capsule {
+            background-color: #e0e6f6; /* Fondo azul claro/gris similar a la imagen */
+            padding: 0.75rem 1.5rem; /* Relleno */
+            border-radius: 9999px; /* Bordes muy redondeados para forma de cápsula */
+            display: flex; /* Para alinear el icono y el texto */
+            align-items: center; /* Centrar verticalmente el icono y texto */
+            justify-content: center; /* Centrar horizontalmente el contenido de la cápsula */
+            width: fit-content; /* El ancho se ajusta al contenido */
+            margin: 0 auto 0.5rem auto; /* Centra la cápsula y agrega margen inferior */
+            box-sizing: border-box;
+        }
+
+        .professional-career-capsule img {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.5rem; /* Espacio entre el icono y el texto */
+            display: block; /* Asegura que la imagen no tenga espacio extra */
+        }
+
+        .professional-career-capsule span {
+            color: #4976BA; /* Color azul para el texto */
+            font-weight: 600; /* Negrita */
+            font-size: 1.125rem; /* text-lg */
+            white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+        }
+
+        /* Modifica los estilos de la cápsula profesional */
+.professional-career-capsule i {
+    margin-right: 0.5rem;
     font-size: 1.2rem;
-    margin-bottom: 3rem;
-    color: #cbd5e0;
+    color: #4976BA; /* Cambia el color del icono */
 }
 
-.why-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: 100%; /* Ancho por defecto para pantallas pequeñas (una card por fila) */
-}
+        /* Estilos para el título principal en el header */
+        .main-title {
+            font-family: 'Publico Headline Web', sans-serif;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 1.2;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 800px;
+        }
 
-.why-item {
-    background-color: #fff;
-    color: #333;
-    margin: 1rem 0; /* Margen vertical para una sola card */
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ancho por defecto para pantallas pequeñas */
-}
+        .main-title span {
+            font-family: 'Publico Headline Web', sans-serif !important; /* Forzar la fuente */
+            font-weight: 700;
+        }
 
-.why-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #35558A;
-}
+        /* Colores específicos para cada span */
+        .main-title span:first-child {
+            color: #343C3D;
+        }
 
-.why-item p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #343C3D;
-}
+        .main-title span:last-child {
+            color: #00008F;
+        }
 
-/* Para pantallas mayores de 768px y menores o iguales a 1200px */
-@media (min-width: 865px) and (max-width: 1200px) {
-    .why-grid {
-        width: 80%; /* Ocupa el 80% del ancho */
-    }
+        .font-bold {
+            color: #5C5CB7;
+            font-weight: 600;
+        }
 
-    .why-item {
-        width: 45%; /* Dos cards por fila */
-        margin: 1rem; /* Margen alrededor de las cards */
-    }
-}
+        /* Media query para pantallas más grandes */
+        @media (min-width: 768px) {
+            .main-title {
+                font-size: 40px; /* md:text-5xl */
+            }
+        }
 
-/* Para pantallas mayores de 1200px */
-@media (min-width: 1201px) {
-    .why-grid {
-        max-width: 80%; /* Ocupa el 60% del ancho máximo */
-    }
+        /* Párrafo descriptivo debajo del título */
+        .description-paragraph {
+            margin-top: 1rem; /* mt-4 */
+            color: #4a5568; /* text-gray-700 */
+            max-width: 42rem; /* max-w-2xl */
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.125rem; /* text-lg */
+            text-align: center;
+            margin: 1rem auto;
+            max-width: 800px; /* o el ancho que prefieras */
+        }
 
-    .why-item {
-        width: 45%; /* Dos cards por fila */
-        margin: 1rem; /* Margen alrededor de las cards */
-    }
-}
+        /* Contenedor de los iconos en el header */
+        .header-icons-container {
+            display: flex; /* flex */
+            justify-content: center; /* justify-center */
+            align-items: center; /* items-center */
+            margin-top: 2rem; /* mt-8 */
+            gap: 2rem; /* space-x-8 */
+            color: #4a5568; /* text-gray-600 */
+        }
+
+        .header-icon-item {
+            display: flex; /* flex */
+            flex-direction: column; /* flex-col */
+            align-items: center; /* items-center */
+        }
+
+        .header-icon-circle {
+            background-color: #FFFFFF;
+            padding: 0.75rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 0.5rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-icon-circle span {
+            color: #5C5CB7;
+            font-size: 1.5rem;
+        }
+
+        /* Contenedor principal para la línea de tiempo y los segmentos */
+        .main-timeline-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            padding: 4rem 20px;
+            box-sizing: border-box;
+        }
+
+        /* Línea vertical central */
+        .central-line {
+            position: absolute;
+            left: 50%;
+            width: 0.5px; /* Más delgada (0.5px) */
+            background-color: rgba(0, 0, 143, 0.1); /* Color azul oscuro con más transparencia (0.1) */
+            height: 94%;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+
+        /* Cada segmento (fila) de la línea de tiempo */
+        .timeline-segment {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Alinea los elementos en el centro verticalmente */
+            width: 100%;
+            margin: 0 auto;
+            max-width: 1000px;
+            margin-bottom: 3rem; /* Espacio entre segmentos */
+            position: relative; /* Para el posicionamiento del punto */
+        }
+
+        /* Contenedor para el contenido de cada lado (texto o imagen) */
+        .timeline-content-wrapper {
+            width: calc(50% - 2rem); /* Ocupa casi la mitad del ancho, dejando espacio para la línea y padding */
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Alineación específica para el contenido de texto a la izquierda */
+        .timeline-content-wrapper.text-left {
+            padding-right: 3rem;
+            text-align: right;
+        }
+
+        /* Alineación específica para el contenido de imagen a la derecha */
+        .timeline-content-wrapper.image-right {
+            padding-left: 3rem;
+            text-align: left;
+        }
+
+        /* Alineación específica para el contenido de imagen a la izquierda */
+        .timeline-content-wrapper.image-left {
+            padding-right: 3rem;
+            text-align: right;
+        }
+
+        /* Alineación específica para el contenido de texto a la derecha */
+        .timeline-content-wrapper.text-right {
+            padding-left: 3rem;
+            text-align: left;
+        }
+
+        /* Estilos generales para las tarjetas de contenido (transparentes por defecto) */
+        .timeline-card {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Estilos específicos para tarjetas de TEXTO */
+        .timeline-card.is-text {
+            padding: 0px;
+            border-radius: 0.75rem;
+        }
 
 
+
+        .timeline-card.is-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0;
+        }
+
+        .timeline-card h3 {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #1a202c;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-card p {
+            color: #4a5568;
+        }
+
+        /* Punto de conexión en la línea de tiempo */
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            background-color: rgba(0, 0, 143, 0.1);
+            border: 2px solid #00008F;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        /* Clase para activar el efecto de pulso una sola vez */
+        .timeline-dot.dot-pulse-once {
+            animation: pulse-dot 3s forwards;
+        }
+
+        /* Keyframes para el efecto de pulso del dot */
+        @keyframes pulse-dot {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                box-shadow: 0 0 0 0 rgba(0, 0, 143, 0.7);
+            }
+            70% {
+                transform: translate(-50%, -50%) scale(1.1);
+                box-shadow: 0 0 0 10px rgba(0, 0, 143, 0);
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                box-shadow: 0 0 0 0 rgba(0, 0, 143, 0);
+            }
+        }
+
+        /* Animaciones del contenido */
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .animate-on-scroll.slide-in-left {
+            transform: translateX(-80px);
+        }
+
+        .animate-on-scroll.slide-in-right {
+            transform: translateX(80px);
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Media queries para responsividad */
+       
+ @media (max-width: 768px) {
+            /* Ajustes para la cápsula de carrera profesional en móviles */
+            .professional-career-capsule {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+                margin-bottom: 1rem; /* Más espacio abajo en móvil */
+            }
+            .professional-career-capsule img {
+                width: 16px;
+                height: 16px;
+            }
+
+            /* Ajustes para el header en móviles */
+            .header-section-content {
+                padding: 2rem 1rem; /* Reducir padding en móviles */
+            }
+
+            .main-title {
+                font-size: 1.8rem; /* Reducir tamaño del título principal en móviles */
+                margin-bottom: 0.5rem; /* Ajustar margen */
+            }
+
+            .description-paragraph {
+                font-size: 1rem; /* Ajustar tamaño de párrafo en móviles */
+                padding: 0 0.5rem; /* Asegurar padding lateral para el párrafo */
+                margin-top: 0.5rem; /* Ajustar margen */
+            }
+
+            .header-icons-container {
+                flex-wrap: wrap; /* Permite que los iconos se envuelvan a la siguiente línea */
+                gap: 1rem; /* Reducir espacio entre iconos en móviles */
+                margin-top: 1.5rem; /* Ajustar margen */
+            }
+            .header-icon-item {
+                flex: 1 1 auto; /* Permite que los ítems se distribuyan y crezcan */
+                min-width: 100px; /* Asegura un ancho mínimo para cada ítem */
+            }
+
+            /* La línea de tiempo se convierte en una sola columna */
+            .timeline-segment {
+                flex-direction: column;
+                padding-left: 25px; /* Dar espacio para la línea y el dot */
+                margin-bottom: 3rem; /* Mantener espacio entre segmentos */
+            }
+
+            /* Posicionamiento de la línea central en móvil */
+            .central-line {
+                left: 20px; /* Mueve la línea a la izquierda de la pantalla */
+                transform: translateX(0);
+            }
+
+            /* Orden de elementos en móvil: Primero texto, luego imagen */
+            /* Los contenedores que tienen texto siempre irán primero */
+            .timeline-content-wrapper.text-left,
+            .timeline-content-wrapper.text-right {
+                order: 1;
+                margin-bottom: 1.5rem; /* Espacio después del bloque de texto */
+            }
+
+            /* Los contenedores que tienen imagen siempre irán después */
+            .timeline-content-wrapper.image-left,
+            .timeline-content-wrapper.image-right {
+                order: 2;
+                margin-bottom: 0; /* Eliminar margen inferior ya que timeline-segment tiene margin-bottom */
+            }
+
+            /* Contenedores de contenido (texto/imagen) en móvil */
+            .timeline-content-wrapper {
+                width: 100%; /* Ocupa todo el ancho disponible */
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            /* Eliminar alineaciones específicas para móvil, todo a la izquierda */
+            .timeline-content-wrapper.text-left,
+            .timeline-content-wrapper.text-right,
+            .timeline-content-wrapper.image-left,
+            .timeline-content-wrapper.image-right {
+                text-align: left;
+                padding: 0;
+            }
+
+            /* Asegurar que los paddings sean consistentes para todos los wrappers en móvil */
+            .timeline-card.is-text {
+                padding: 0; /* Asegurar que no haya padding extra en la tarjeta de texto */
+                text-align: left; /* Asegurar alineación de texto a la izquierda */
+            }
+
+            .timeline-card.is-image {
+                padding: 0; /* Asegurar que no haya padding extra en la tarjeta de imagen */
+            }
+
+            /* Ajustes específicos para la imagen en móvil */
+            .timeline-card.is-image img {
+                width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+                max-width: 300px; /* Limita el tamaño de la imagen para que no sea demasiado grande en móviles */
+                height: auto;
+                display: block;
+                margin-left: auto; /* Centrar imagen */
+                margin-right: auto; /* Centrar imagen */
+                margin-top: 1rem; /* Espacio superior para la imagen */
+            }
+
+            /* Posicionamiento del dot en móvil para alinearse con la línea lateral */
+            .timeline-dot {
+                left: 0px; /* Mueve el dot a la izquierda, coincidiendo con la línea */
+                transform: translate(-50%, -50%); /* Centra el dot horizontalmente en 'left: 20px' */
+                z-index: 1; /* Asegura que el dot esté sobre la línea */
+                top: 0; /* Alinea el dot con la parte superior del segmento en modo columna */
+                margin-top: 1.5rem; /* Añade un pequeño margen para que no esté pegado al borde superior del primer elemento */
+            }
+
+            /* Asegurar que el padding horizontal del scroll-section-wrapper se mantenga */
+            .scroll-section-wrapper {
+                padding: 0 10px; /* Ajustar padding lateral para móviles */
+            }
+        }
+ /* ================================ */
+        /* Review CSS - */
+        /* ================================ */
+
+      /* Contenedor principal de la sección */
+        .section-container {
+            padding-top: 8rem; /* py-16 */
+            padding-bottom: 4rem; /* py-16 */
+            padding-left: 1rem; /* px-4 */
+            padding-right: 1rem; /* px-4 */
+            background: linear-gradient(180deg, #F6F9FD 0%, #E0E7ED 100%);
+        }
+        @media (min-width: 640px) { /* sm:px-6 */
+            .section-container {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+        @media (min-width: 1024px) { /* lg:px-8 */
+            .section-container {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+
+        /* Contenedor de contenido máximo y cuadrícula principal */
+        .max-width-container {
+            max-width: 80rem; /* max-w-7xl */
+            margin-left: auto; /* mx-auto */
+            margin-right: auto; /* mx-auto */
+            display: grid;
+            grid-template-columns: 1fr; /* grid-cols-1 */
+            gap: 2rem; /* gap-8 */
+            align-items: flex-start; /* items-start */
+        }
+        @media (min-width: 1024px) { /* lg:grid-cols-4 lg:gap-16 */
+            .max-width-container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        /* Columna izquierda del título */
+        .title-column {
+            text-align: left; /* text-left */
+            margin-bottom: 3rem; /* Añadido: Espacio extra debajo del título para separarlo de las cards */
+        }
+        @media (min-width: 1024px) { /* lg:col-span-1 lg:sticky lg:top-16 */
+            .title-column {
+                grid-column: span 1 / span 1;
+                position: sticky;
+                top: 4rem;
+                margin-bottom: 0; /* Reiniciar el margen en desktop si es sticky para evitar doble espacio */
+            }
+        }
+
+        /* Texto del subtítulo */
+        .subtitle-text {
+            font-size: 0.875rem; /* text-sm */
+            font-weight: 600; /* font-semibold */
+            text-transform: uppercase; /* uppercase */
+            letter-spacing: 0.025em; /* tracking-wide */
+            color: #343C3D; /* text-blue-light */
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+
+        /* Título principal */
+        .main-title-h2 {
+            margin-top: 0.5rem; /* mt-2 */
+            font-size: 3.6rem; /* main-title-h2 (tamaño personalizado) */
+            line-height: 1.2;
+            font-weight: 800; /* font-extrabold */
+            color: #00008F; /* text-blue-dark */
+        }
+        .main-title-h2 .line-break-desktop {
+            display: none; /* hidden */
+        }
+        @media (min-width: 1024px) { /* lg:inline */
+            .main-title-h2 .line-break-desktop {
+                display: inline;
+            }
+        }
+
+        /* Modifica los estilos del título principal para móvil */
+        @media (max-width: 768px) {
+            .main-title-h2 {
+                font-size: 2.6rem; /* Ajustar tamaño para móvil */
+                line-height: 1.2;
+            }
+        }
+
+        /* Contenedor de la galería de testimonios */
+        .testimonials-grid-container {
+            grid-column: span 2 / span 3; /* lg:col-span-3 */
+            display: grid;
+            grid-template-columns: 1fr; /* Cambiado de 3fr a 1fr para una columna por defecto */
+            gap: 2.5rem; /* Aumentado de 1rem a 2.5rem para más espacio entre tarjetas */
+            align-items: flex-start; /* grid-align-start */
+        }
+        @media (min-width: 768px) { /* md:grid-cols-2 */
+            .testimonials-grid-container {
+                grid-template-columns: repeat(2, 1fr);
+                /* Restauramos el gap a 2.5rem también para pantallas medianas */
+                gap: 2.5rem;
+            }
+            /* Reducir el desfase del efecto zig-zag y hacerlo más sutil */
+            .testimonials-grid-container > .testimonial-card:nth-child(odd) {
+                margin-top: 2.6rem; /* Reducido de 2rem a 1.25rem para un desfase más sutil */
+            }
+              .testimonials-grid-container > .testimonial-card:nth-child(even) {
+                margin-top: -2.6rem; /* Reducido de 2rem a 1.25rem para un desfase más sutil */
+            }
+        }
+
+        /* Diseño de la tarjeta de testimonio individual */
+        .testimonial-card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0; /* Borde gris claro */
+            border-radius: 0.75rem; /* Esquinas ligeramente redondeadas */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra con más efecto */
+            padding: 1rem;
+            padding-top: 2rem; /* Más espacio superior para el ícono de comillas "fuera" */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Alineado a la izquierda para todo el contenido de la tarjeta */
+            text-align: left; /* Alinea el texto internamente a la izquierda */
+            transition: all 0.3s ease; /* Transición para todos los cambios al hover */
+            height: auto; /* Permitir que la altura se adapte al contenido */
+            opacity: 0; /* Inicialmente oculto para la animación */
+            transform: translateY(20px); /* Inicialmente movido hacia abajo */
+            position: relative;
+            max-width: 350px; /* Aumentado de 300px a 350px para hacer las cards más anchas */
+            margin-left: auto; /* Centrar la card dentro de su columna */
+            margin-right: auto;
+            overflow: visible; /* Necesario para que la imagen de comillas sobresalga */
+        }
+        /* La clase 'show' será añadida por JavaScript para mostrar la tarjeta */
+        .testimonial-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .testimonial-card:hover {
+            border: 2px solid #00008F; /* Borde azul de 2px al hover */
+            background-color: rgba(0, 0, 143, 0.06); /* Fondo azul con 6% de opacidad al hover */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hover */
+            transform: translateY(-5px);
+        }
+
+        /* Contenedor del video incrustado */
+        .video-thumbnail-container {
+            position: relative;
+            width: 100%;
+            padding-top: 133.33%; /* Proporción para video vertical (3:4) - Menos alto */
+            overflow: hidden;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            flex-shrink: 0;
+        }
+        .video-thumbnail-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 0.5rem;
+            opacity: 1; /* Visible por defecto */
+            z-index: 1; /* Por encima del contenido normal */
+        }
+
+        /* Imagen de Comillas - Mitad dentro, mitad fuera */
+        .quote-image {
+            position: absolute;
+            top: -0.8rem; /* Mueve la imagen 1.5rem hacia arriba, fuera de la tarjeta */
+            right: -0.5rem; /* Mueve la imagen 0.5rem hacia la derecha, fuera de la tarjeta */
+            width: 30px; /* Tamaño un poco más grande para que se note fuera */
+            height: auto;
+            z-index: 20; /* Asegura que esté por encima del borde y contenido */
+        }
+
+        /* Texto del testimonio */
+        .testimonial-text {
+            font-size: 0.9rem; /* Texto dentro de la card más pequeño */
+            line-height: 1.5;
+            color: #333333;
+            margin-bottom: 0.75rem;
+            flex-grow: 1;
+            text-align: left; /* Asegura la alineación a la izquierda */
+            padding: 0 0.25rem;
+            width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        }
+
+        /* Autor del testimonio y antigüedad */
+        .testimonial-author {
+            display: flex;
+            align-items: center; /* Alinea el avatar y el texto a la izquierda */
+            margin-top: auto;
+            font-weight: 600;
+            color: #00008F;
+            transition: color 0.2s ease;
+            text-decoration: none;
+            width: 100%;
+        }
+        .author-info-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        .author-name {
+            color: #00008F;
+            font-weight: 600;
+        }
+        .author-img {
+            width: 2.2rem;
+            height: 2.2rem;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 0.6rem;
+            flex-shrink: 0;
+        }
+        .seniority-text {
+            font-size: 0.85rem;
+            color: #666666;
+            margin-top: 0.2rem; /* Espacio entre nombre y antigüedad */
+        }
+        .author-text-container {
+            display: flex;
+            flex-direction: column; /* Para apilar nombre y antigüedad */
+            align-items: flex-start; /* Alinea el nombre y antigüedad a la izquierda */
+            flex-grow: 1;
+            line-height: 1.2rem;
+        }
+
+/* ================================ */
+        /*  CSS Call to Action - Review*/
+        /* ================================ */
+   .cta-section {
+            padding: 2rem; /* Espaciado interno */
+            margin-top: 4rem; /* Margen superior para separarlo del contenido anterior */
+            max-width: 60rem; /* Ancho máximo similar a la imagen */
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffffff; /* Fondo blanco para el CTA, como en la imagen */
+            border-radius: 1rem; /* Bordes redondos */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            text-align: center; /* Centrar el contenido */
+            /* grid-column: 1 / -1; ELIMINADO: Ya no es parte del grid */
+        }
+        @media (min-width: 768px) {
+            .cta-section {
+                padding: 3rem; /* Más padding en pantallas grandes */
+            }
+        }
+
+        .cta-title {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700; /* font-bold */
+            color: #333333;
+            margin-bottom: 0.75rem; /* mb-3 */
+        }
+        @media (min-width: 768px) {
+            .cta-title {
+                font-size: 2.25rem; /* text-4xl */
+            }
+        }
+
+        .cta-subtitle {
+            font-size: 1rem; /* text-base */
+            color: #666666;
+            margin-bottom: 2rem; /* mb-8 */
+            line-height: 1.5;
+            max-width: 40rem; /* Limitar ancho del subtítulo */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block; /* Para que los paddings funcionen bien */
+            background-color: #E25822; /* Color de botón naranja/rojo */
+            color: #ffffff; /* Texto blanco */
+            padding: 0.75rem 2rem; /* Espaciado interno */
+            border-radius: 9999px; /* Borde completamente redondo (pill shape) */
+            text-decoration: none; /* Quitar subrayado del enlace */
+            font-weight: 600; /* Texto seminegrita */
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+            border: none; /* Sin borde */
+            cursor: pointer; /* Cursor de puntero */
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #D24A19; /* Color más oscuro al pasar el ratón */
+            transform: translateY(-2px); /* Pequeño efecto de elevación */
+        }
 
 /* ================================ */
 /* 7. Llamado a la Acción (CTA)     */
@@ -378,6 +1018,96 @@ font-family: 'Publico Headline Web';
     }
 }
 
+/* Estilos para la sección post-testimonios */
+.post-testimonios {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.post-testimonios-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.post-testimonios-text {
+    flex: 1;
+}
+
+.post-testimonios-text h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #343C3D;
+    font-family: 'Publico Headline Web', sans-serif;
+}
+
+/* Modifica los estilos de post-testimonios para usar párrafo */
+.post-testimonios-text p {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #343C3D;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: normal;
+    margin: 0;
+}
+
+.post-testimonios-text p .no-break {
+    color: #00008F;
+    font-weight: 700;
+    font-family: 'Source Sans Pro', sans-serif;
+    white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .post-testimonios-text p {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+.no-break {
+    white-space: nowrap;
+}
+/* Estilo especial para AXA COLPATRIA */
+.post-testimonios-text h2 .no-break {
+    color: #00008F; /* Color azul corporativo */
+    font-weight: 700; /* Negrilla */
+    font-family: 'Publico Headline Web', sans-serif; /* Fuente corporativa */
+}
+
+
+.post-testimonios-image {
+    flex: 1;
+}
+
+.post-testimonios-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .post-testimonios-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .post-testimonios-text h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .post-testimonios-image {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
 
 
 
@@ -396,6 +1126,7 @@ font-family: 'Publico Headline Web';
     max-width: 28rem;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     margin: 10px auto;
+    z-index: 1000; /* Valor alto para estar sobre el footer */
 }
 
 /* Ocultar el formulario */
@@ -437,6 +1168,7 @@ font-family: 'Publico Headline Web';
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     display: none; /* Se ocultará inicialmente */
     transition: opacity 0.3s ease-in-out;
+    z-index: 1000; /* Mismo z-index que el formulario */
 }
 
 
@@ -773,6 +1505,11 @@ select {
     background-color: #4976BA;
     color: #fff;
     padding: 2rem;
+    width: 100vw;           /* Ancho completo de la ventana */
+    margin-left: calc(-50vw + 50%); /* Centrar considerando el scroll */
+    margin-right: calc(-50vw + 50%); /* Centrar considerando el scroll */
+    position: relative; /* Mantener position: relative */
+    z-index: 1; /* Valor bajo para estar debajo del formulario y botón */
 }
 
 .footer-container {
@@ -782,6 +1519,12 @@ select {
     margin: 0 auto;
     margin-bottom: 2rem;
     width: 80%;
+    max-width: 1200px;    /* O el ancho máximo que prefieras */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 2rem;      /* Padding horizontal para el contenido */
 }
 
 .footer-column {
@@ -999,6 +1742,19 @@ textarea::-ms-input-placeholder {
     color: #99a5b6 !important;
     opacity: 1;
 }
+
+/* Agregar estos estilos para la animación */
+.header-section-content {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    will-change: opacity, transform;
+}
+
+.header-section-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 </style>
 
 
@@ -1014,7 +1770,7 @@ textarea::-ms-input-placeholder {
         <div class="hero-content">
             <h1>Haz parte de nuestra <br> fuerza comercial externa</h1>
         </div>
-      </section
+      </section>
     <!-- Stats Section -->
     <section class="stats">
         <h2>Únete a nuestra fuerza comercial</h2>
@@ -1036,41 +1792,231 @@ textarea::-ms-input-placeholder {
     </section>
 
      <!-- Why Work With Us Section -->
-     <section class="why-work">
-        <h2>Por qué trabajar con<br>AXA COLPATRIA</h2>
-        <p class="why-subtitle">¡Estamos buscando gente como tú, que quiera poner a prueba sus límites mientras impulsa el progreso!</p>
-        <div class="why-grid">
-            <div class="why-item">
-                <h3>Plan de incentivos</h3>
-                <p>Nuestra compañía es reconocida por contar con uno de los mejores Planes de Incentivos del mercado. Podrás acceder a concursos periódicos, campeonatos trimestrales y anuales, bolsas millonarias, cupos a extraordinarias convenciones nacionales e internacionales, y mucho más.</p>
-            </div>
-            <div class="why-item">
-                <h3>Herramientas digitales</h3>
-                <p>Podrás autogestionar tus negocios de manera rápida y sencilla en nuestra Sucursal en Línea, así como acceder a material virtual como piezas comerciales y ayudas.</p>
-            </div>
-            <div class="why-item">
-                <h3>Líderes expertos</h3>
-                <p>Contarás siempre con acompañamiento y apoyo de líderes expertos, que te guiarán para alcanzar tus metas y ganar los premios y beneficios de nuestro Plan de Incentivos.</p>
-            </div>
-            <div class="why-item">
-                <h3>Capacitación</h3>
-                <p>Podrás acceder a una amplia malla formativa tanto para aprender sobre nuestros productos y adquirir la idoneidad para comercializarlos, como para mejorar tu perfil comercial y habilidades blandas.</p>
+      <div class="scroll-section-wrapper">
+        <div class="header-section-content">
+            <div class="text-container">
+                <!-- La nueva estructura de cápsula para "Tu carrera profesional" -->
+            <div class="professional-career-capsule">
+    <i class="icon-axa-fu129"></i>
+    <span>Tu carrera profesional</span>
+</div>
+                </div>
+
+                <h2 class="main-title">
+    <span>¿Por qué trabajar con</span><br>
+    <span>AXA COLPATRIA</span>
+</h2>
+                <p class="description-paragraph">
+                    Estamos buscando gente como tú, que quiera poner a prueba <br> sus límites mientras impulsa el progreso
+                </p>
+                <!-- Reemplaza el div de header-icons-container actual con este -->
+<div class="header-icons-container">
+    <div class="header-icon-item">
+        <div class="header-icon-circle">
+            <span class="icon-axa-fu101"></span>
+        </div>
+        <span class="font-bold">Metas alcanzables</span>
+    </div>
+    <div class="header-icon-item">
+        <div class="header-icon-circle">
+            <span class="icon-axa-fu108"></span>
+        </div>
+        <span class="font-bold">Crecimiento continuo</span>
+    </div>
+    <div class="header-icon-item">
+        <div class="header-icon-circle">
+            <span class="icon-axa-fu052"></span>
+        </div>
+        <span class="font-bold">Innovación constante</span>
+    </div>
+</div>
             </div>
         </div>
-    </section>
 
-   <!-- Call to Action Section -->
-   <section class="cta">
-    <div class="cta-content">
-        <p>¡Si buscas un lugar para desarrollar al máximo tu potencial en ventas, <strong>AXA&nbsp;COLPATRIA</strong> es para ti!</p>
-    </div>
-    <div class="cta-image">
-        <img src="https://image.email.online.axacolpatria.co/lib/fe2911747364047e721277/m/1/5266682a-0bb5-4125-954c-cf28d3136485.jpg" alt="Handshake meeting">
+        <div class="main-timeline-container">
+            <div class="central-line"></div>
+
+            <!-- Segmento 1: Texto a la izquierda, Imagen a la derecha -->
+            <div class="timeline-segment">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content-wrapper text-left animate-on-scroll" data-animation="slide-in-left">
+                    <div class="timeline-card is-text">
+                        <h3>Plan de incentivos</h3>
+                        <p>
+                            Somos reconocidos por contar con uno de los mejores Planes de Incentivos del mercado. Accederás a concursos periódicos, campeonatos trimestrales y anuales, bolsas millonarias, cupos a convenciones nacionales e internacionales y mucho más.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-content-wrapper image-right animate-on-scroll" data-animation="slide-in-right">
+                    <div class="timeline-card is-image">
+                        <img src="images/LI01.JPG" alt="Persona trabajando en una laptop">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segmento 2: Imagen a la izquierda, Texto a la derecha -->
+            <div class="timeline-segment">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content-wrapper image-left animate-on-scroll" data-animation="slide-in-left">
+                    <div class="timeline-card is-image">
+                        <img src="images/li02.JPG" alt="Monitor mostrando un gráfico de datos">
+                    </div>
+                </div>
+                <div class="timeline-content-wrapper text-right animate-on-scroll" data-animation="slide-in-right">
+                    <div class="timeline-card is-text">
+                        <h3>Herramientas digitales</h3>
+                        <p>
+                            Podrás autogestionar tus negocios de manera rápida y sencilla en nuestra Sucursal en Línea, así como acceder a material virtual como piezas comerciales y ayudas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segmento 3: Texto a la izquierda, Imagen a la derecha -->
+            <div class="timeline-segment">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content-wrapper text-left animate-on-scroll" data-animation="slide-in-left">
+                    <div class="timeline-card is-text">
+                        <h3>Líderes Expertos</h3>
+                        <p>
+                            Contarás con el apoyo de un equipo de líderes experimentados que te guiarán en cada paso de tu desarrollo profesional, ofreciéndote mentorship y conocimientos clave del sector.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-content-wrapper image-right animate-on-scroll" data-animation="slide-in-right">
+                    <div class="timeline-card is-image">
+                        <img src="images/li03.JPG" alt="Reunión de equipo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segmento 4: Imagen a la izquierda, Texto a la derecha -->
+            <div class="timeline-segment">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content-wrapper image-left animate-on-scroll" data-animation="slide-in-left">
+                    <div class="timeline-card is-image">
+                        <img src="images/li04.JPG" alt="Oportunidades de crecimiento">
+                    </div>
+                </div>
+                <div class="timeline-content-wrapper text-right animate-on-scroll" data-animation="slide-in-right">
+                    <div class="timeline-card is-text">
+                        <h3>Crecimiento Continuo</h3>
+                        <p>
+                            Ofrecemos programas de desarrollo profesional, certificaciones y oportunidades para que impulses tu carrera y alcances tus metas a largo plazo dentro de la compañía.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+<!-- Review-->
+ <section class="section-container">
+        <div class="max-width-container">
+            <!-- Columna Izquierda (Título) -->
+            <div class="title-column">
+                <p class="subtitle-text">HISTORIAS DE ÉXITO</p>
+                <h2 class="main-title-h2">
+                    La voz de quienes <br class="line-break-desktop"> hacen la <br class="line-break-desktop"> diferencia
+                </h2>
+            </div>
+
+            <!-- Columna Derecha - Galería de Testimonios -->
+            <div class="testimonials-grid-container">
+                <!-- Testimonio 1 -->
+                <div class="testimonial-card relative" data-video-id="5kPpKet36lU">
+                    <img src="https://oswal.com.co/wp-content/uploads/2025/08/Comillas.png" alt="Comillas" class="quote-image">
+                    <div class="video-thumbnail-container relative">
+                        <iframe src="https://www.youtube.com/embed/5kPpKet36lU?controls=1&modestbranding=1&rel=0&autoplay=0&playlist=5kPpKet36lU&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <p class="testimonial-text">"El servicio ha transformado completamente nuestra forma de trabajar. Los resultados superaron todas nuestras expectativas y el equipo de soporte fue excepcional."</p>
+                    <a href="#" class="testimonial-author">
+                        <div class="author-info-wrapper">
+                            <img class="author-img" src="https://grace.divi-den.com/wp-content/uploads/2022/01/tina-testimonial-i-got-image1-min.jpg" onerror="this.onerror=null;this.src='https://placehold.co/40x40/5D75D9/FFFFFF?text=CR';" alt="Carlos Rodríguez">
+                            <div class="author-text-container">
+                                <span class="author-name">Carlos Rodríguez</span>
+                                <span class="seniority-text">5 años de antigüedad</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="testimonial-card relative" data-video-id="ZYtVo-HNmRg">
+                    <img src="https://oswal.com.co/wp-content/uploads/2025/08/Comillas.png" alt="Comillas" class="quote-image">
+                    <div class="video-thumbnail-container relative">
+                        <iframe src="https://www.youtube.com/embed/ZYtVo-HNmRg?controls=1&modestbranding=1&rel=0&autoplay=0&playlist=ZYtVo-HNmRg&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <p class="testimonial-text">"La experiencia ha sido fantástica desde el primer día. El producto es intuitivo y potente, superando todas nuestras expectativas de eficiencia y facilidad de uso. Realmente nos ha simplificado muchos procesos diarios."</p>
+                    <a href="#" class="testimonial-author">
+                        <div class="author-info-wrapper">
+                            <img class="author-img" src="https://olena.wp-den.com/wp-content/uploads/2023/05/otestimonial10-image2.webp" onerror="this.onerror=null;this.src='https://placehold.co/40x40/5D75D9/FFFFFF?text=ML';" alt="María López">
+                            <div class="author-text-container">
+                                <span class="author-name">María López</span>
+                                <span class="seniority-text">3 años de antigüedad</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="testimonial-card relative" data-video-id="jI4ab3ZpTh8">
+                    <img src="https://oswal.com.co/wp-content/uploads/2025/08/Comillas.png" alt="Comillas" class="quote-image">
+                    <div class="video-thumbnail-container relative">
+                        <iframe src="https://www.youtube.com/embed/jI4ab3ZpTh8?controls=1&modestbranding=1&rel=0&autoplay=0&playlist=jI4ab3ZpTh8&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <p class="testimonial-text">"El equipo mostró un compromiso y profesionalismo inigualables, ayudándonos a escalar operaciones de manera eficiente y con resultados sorprendentes. Su capacidad para entender nuestras necesidades y ofrecer soluciones innovadoras fue clave para nuestro éxito."</p>
+                    <a href="#" class="testimonial-author">
+                        <div class="author-info-wrapper">
+                            <img class="author-img" src="https://grace.divi-den.com/wp-content/uploads/2022/01/tina-testimonial-i-got-image3-min.jpg" onerror="this.onerror=null;this.src='https://placehold.co/40x40/5D75D9/FFFFFF?text=JO';" alt="Juan Olarte">
+                            <div class="author-text-container">
+                                <span class="author-name">Juan Olarte</span>
+                                <span class="seniority-text">7 años de antigüedad</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Testimonio 4 -->
+                <div class="testimonial-card relative" data-video-id="3EfSeEQMBPM">
+                    <img src="https://oswal.com.co/wp-content/uploads/2025/08/Comillas.png" alt="Comillas" class="quote-image">
+                    <div class="video-thumbnail-container relative">
+                        <iframe src="https://www.youtube.com/embed/3EfSeEQMBPM?controls=1&modestbranding=1&rel=0&autoplay=0&playlist=3EfSeEQMBPM&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <p class="testimonial-text">"La implementación fue sorprendentemente sencilla y los beneficios se vieron de inmediato. Recomendamos esta solución sin dudarlo, es una inversión que realmente vale la pena para cualquier equipo."</p>
+                    <a href="#" class="testimonial-author">
+                        <div class="author-info-wrapper">
+                            <img class="author-img" src="https://olena.wp-den.com/wp-content/uploads/2023/05/otestimonial10-image4.webp" onerror="this.onerror=null;this.src='https://placehold.co/40x40/5D75D9/FFFFFF?text=AG';" alt="Ana García">
+                            <div class="author-text-container">
+                                <span class="author-name">Ana García</span>
+                                <span class="seniority-text">2 años de antigüedad</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Puedes añadir más testimonios copiando y pegando el bloque del testimonio -->
+            </div>
+        </div>
+         <!-- Nueva Sección de Call to Action - Ahora fuera del grid de testimonios, pero dentro de section-container -->
+        <section class="cta-section">
+            <h3 class="cta-title">¿Quieres ser nuestro próximo caso de éxito?</h3>
+            <p class="cta-subtitle">Únete a cientos de personas que ya confían en nosotros para impulsar su crecimiento.</p>
+            <a href="#" class="cta-button">COMENZAR</a>
+        </section>
+    </section>
+ 
+ <!-- Sección Post-Testimonios -->
+<section class="post-testimonios">
+    <div class="post-testimonios-container">
+        <div class="post-testimonios-text">
+            <p>¡Si buscas un lugar para desarrollar al máximo tu potencial en ventas, <span class="no-break">AXA COLPATRIA</span> es para ti!</p>
+        </div>
+        <div class="post-testimonios-image">
+            <img src="images/trabaja_en_AXA.jpg" alt="Trabaja en AXA COLPATRIA">
+        </div>
     </div>
 </section>
-
-
-
 
 <!-- Floating Form Section -->
 <div class="container" id="formContainer">  
@@ -1124,6 +2070,7 @@ textarea::-ms-input-placeholder {
                     <option value="pereira">Pereira</option>
                     <option value="santa_marta">Santa Marta</option>
                     <option value="tunja">Tunja</option>
+
                     <option value="valledupar">Valledupar</option>
                     <option value="villavicencio">Villavicencio</option>
                 </select>
@@ -1370,26 +2317,113 @@ textarea::-ms-input-placeholder {
    
 <script>  
 
-// Animación estadisticas
-const counters = document.querySelectorAll('.counter');
-const speed = 5600; // Adjust the speed of the animation
-
-counters.forEach(counter => {
-    const updateCount = () => {
+// Animación de estadísticas
+document.addEventListener('DOMContentLoaded', function() {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // Velocidad más lenta (mayor número = más lento)
+    
+    // Función para animar un contador
+    function animateCounter(counter) {
         const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
         const increment = target / speed;
+        let currentCount = 0;
 
-        if (count < target) {
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(updateCount, 10);
-        } else {
-            counter.innerText = target;
-        }
-    };
+        const updateCount = () => {
+            if (currentCount < target) {
+                currentCount += increment;
+                counter.innerText = Math.ceil(currentCount);
+                requestAnimationFrame(updateCount);
+            } else {
+                counter.innerText = target;
+            }
+        };
 
-    updateCount();
+        updateCount();
+    }
+
+    // Crear el observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                animateCounter(counter);
+                // Dejar de observar después de iniciar la animación
+                observer.unobserve(counter);
+            }
+        });
+    }, {
+        threshold: 0.5, // Activar cuando el 50% del elemento sea visible
+        rootMargin: '0px'
+    });
+
+    // Observar cada contador
+    counters.forEach(counter => {
+        counter.innerText = '0'; // Iniciar en 0
+        observer.observe(counter);
+    });
 });
+
+
+// Porque trabajar con nosotros
+document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target; // Esto es el timeline-content-wrapper
+                        const animationType = element.dataset.animation;
+                        element.classList.add('animated', animationType);
+
+                        // Encontrar el timeline-dot dentro del timeline-segment padre y activar su animación
+                        const segment = element.closest('.timeline-segment');
+                        if (segment) {
+                            const dot = segment.querySelector('.timeline-dot');
+                            if (dot && !dot.classList.contains('dot-pulse-once')) { // Evitar activar la animación varias veces
+                                dot.classList.add('dot-pulse-once');
+                            }
+                        }
+
+                        observer.unobserve(element);
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            });
+
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+// Reviews
+document.addEventListener('DOMContentLoaded', () => {
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+            // --- Animación de Aparición al Hacer Scroll (Intersection Observer) ---
+            const observerOptions = {
+                root: null, /* viewport */
+                rootMargin: '0px',
+                threshold: 0.2 /* 20% del elemento visible */
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target); /* Deja de observar una vez que aparece */
+                    }
+                });
+            }, observerOptions);
+
+            testimonialCards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+
+
 
 
 const formulario = document.getElementById('smartcapture-block-zt7poz9vx5');
@@ -1482,12 +2516,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const formularioContainer = document.getElementById("formContainer");
     const botonUnirme = document.getElementById("botonUnirme");
     const cerrarFormulario = document.getElementById("cerrarFormulario");
+    let lastScrollPosition = 0;
 
     function esMovil() {
         return window.innerWidth <= 768;
     }
 
-    // Siempre iniciar con el formulario cerrado y solo mostrar el botón en móvil
+    // Inicialización del formulario
     if (formularioContainer && botonUnirme) {
         if (esMovil()) {
             formularioContainer.classList.add("oculto");
@@ -1498,11 +2533,26 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Cerrar formulario al hacer scroll
+    window.addEventListener('scroll', function() {
+        const currentScrollPosition = window.pageYOffset;
+        
+        // Si el usuario ha scrolleado más de 50px
+        if (Math.abs(currentScrollPosition - lastScrollPosition) > 50) {
+            if (formularioContainer && botonUnirme) {
+                formularioContainer.classList.add("oculto");
+                botonUnirme.classList.remove("oculto");
+            }
+        }
+        
+        lastScrollPosition = currentScrollPosition;
+    });
+
     // Botón para abrir el formulario
     if (botonUnirme && formularioContainer) {
         botonUnirme.addEventListener("click", function () {
-            formularioContainer.classList.toggle("oculto"); // Alterna la visibilidad del formulario
-            botonUnirme.classList.toggle("oculto"); // Oculta o muestra el botón
+            formularioContainer.classList.remove("oculto");
+            botonUnirme.classList.add("oculto");
         });
     }
 
@@ -1553,6 +2603,56 @@ experienciaAnios.addEventListener('change', function() {
     } else {
         this.classList.remove('error');
         this.classList.add('valid');
+    }
+});
+
+// Modifica el código JavaScript de la animación
+document.addEventListener('DOMContentLoaded', function() {
+    const headerSection = document.querySelector('.header-section-content');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // La sección está visible en el viewport
+                headerSection.classList.add('visible');
+                // Dejar de observar una vez que se active
+                observer.unobserve(headerSection);
+            }
+        });
+    }, {
+        // Configurar para que se active cuando el 20% de la sección sea visible
+        threshold: 0.2,
+        // Añadir un margen para que se active un poco antes
+        rootMargin: '50px'
+    });
+
+    // Comenzar a observar la sección
+    if (headerSection) {
+        observer.observe(headerSection);
+    }
+});
+
+// Agregar al final de tu archivo JavaScript existente
+document.addEventListener('DOMContentLoaded', function() {
+    const ctaButton = document.querySelector('.cta-button');
+    const formularioContainer = document.getElementById('formContainer');
+    const botonUnirme = document.getElementById('botonUnirme');
+
+    if (ctaButton) {
+        ctaButton.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevenir el comportamiento por defecto del enlace
+            
+            // Si el formulario está oculto, mostrarlo
+            if (formularioContainer && formularioContainer.classList.contains('oculto')) {
+                formularioContainer.classList.remove('oculto');
+                if (botonUnirme) {
+                    botonUnirme.classList.add('oculto');
+                }
+            }
+
+            // Hacer scroll suave hasta el formulario
+            formularioContainer.scrollIntoView({ behavior: 'smooth' });
+        });
     }
 });
 </script>
