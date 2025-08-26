@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Únete a Nuestra Fuerza Comercial de Seguros | AXA COLPATRIA</title>
     <meta name="description" content="¿Quieres trabajar en AXA COLPATRIA? Únete a Nuestra Fuerza Comercial de Seguros y accede a capacitación, plan de incentivos, herramientas digitales y más.">
     <link rel="stylesheet" href="styles.css">
@@ -849,58 +849,67 @@ font-family: 'Publico Headline Web';
         }
 
         /* Texto del testimonio */
-        .testimonial-text {
-            font-size: 0.9rem; /* Texto dentro de la card más pequeño */
-            line-height: 1.5;
-            color: #333333;
-            margin-bottom: 0.75rem;
-            flex-grow: 1;
-            text-align: left; /* Asegura la alineación a la izquierda */
-            padding: 0 0.25rem;
-            width: 100%; /* Asegura que ocupe todo el ancho disponible */
-        }
+.testimonial-text {
+    font-size: 0.9rem; /* Texto dentro de la card más pequeño */
+    line-height: 1.5;
+    color: #333333;
+    margin-bottom: 0.75rem;
+    flex-grow: 1;
+    text-align: left; /* Asegura la alineación a la izquierda */
+    padding: 0 0.25rem;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
 
-        /* Autor del testimonio y antigüedad */
-        .testimonial-author {
-            display: flex;
-            align-items: center; /* Alinea el avatar y el texto a la izquierda */
-            margin-top: auto;
-            font-weight: 600;
-            color: #00008F;
-            transition: color 0.2s ease;
-            text-decoration: none;
-            width: 100%;
-        }
-        .author-info-wrapper {
-            display: flex;
-            align-items: center;
-            width: 100%;
-        }
-        .author-name {
-            color: #00008F;
-            font-weight: 600;
-        }
-        .author-img {
-            width: 2.2rem;
-            height: 2.2rem;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 0.6rem;
-            flex-shrink: 0;
-        }
-        .seniority-text {
-            font-size: 0.85rem;
-            color: #00008f;
-            margin-top: 0.2rem; /* Espacio entre nombre y antigüedad */
-            font-weight: 600;
-        }
-        .author-text-container {
-            display: flex;
-            flex-direction: column; /* Para apilar nombre y antigüedad */
-            align-items: flex-start; /* Alinea el nombre y antigüedad a la izquierda */
-            flex-grow: 1;
-            line-height: 1.2rem;
-        }
+/* Autor del testimonio y antigüedad */
+.testimonial-author {
+    display: flex;
+    align-items: center; /* Alinea el avatar y el texto a la izquierda */
+    margin-top: auto;
+    font-weight: 600;
+    color: #00008F;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    width: 100%;
+}
+.author-info-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.author-name {
+    color: #00008F;
+    font-weight: 600;
+}
+/* REMOVIDO: .author-img */
+.seniority-text {
+    font-size: 0.85rem;
+    color: #00008f;
+    margin-top: 0.2rem; /* Espacio entre nombre y antigüedad */
+    font-weight: 600;
+}
+.author-text-container {
+    display: flex;
+    flex-direction: column; /* Para apilar nombre y antigüedad */
+    align-items: flex-start; /* Alinea el nombre y antigüedad a la izquierda */
+    flex-grow: 1;
+    line-height: 1.2rem;
+}
+
+/* NUEVO ESTILO: Avatar de Iniciales */
+.initials-avatar {
+    width: 2.2rem; /* Mismo tamaño que la imagen original */
+    height: 2.2rem;
+    border-radius: 50%; /* Circular */
+    background-color: #5D75D9; /* Color de fondo similar al placeholder */
+    color: #FFFFFF; /* Color de texto blanco */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    font-size: 0.9rem; /* Tamaño de fuente para las iniciales */
+    font-weight: bold; /* Negrita para las iniciales */
+    margin-right: 0.6rem; /* Mismo margen que la imagen original */
+    flex-shrink: 0;
+}
 
 /* ================================ */
         /*  CSS Call to Action - Review*/
@@ -1719,7 +1728,6 @@ textarea::placeholder {
 
 /* Color placeholder para selects solo cuando está en modo placeholder */
 select:invalid,
-select option[value="0"],
 select option[value=""],
 select option[disabled] {
     color: #99a5b6 !important;
@@ -1771,6 +1779,30 @@ textarea::-ms-input-placeholder {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Puedes agregar esto a tu CSS para mejorar la lista del timeline */
+.timeline-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.timeline-list li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 0.75rem;
+    gap: 0.5rem;
+}
+
+.timeline-list .icon-axa-fu039 {
+    color: #5C5CB7;
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+    line-height: 1.5;
+}
 </style>
 
 
@@ -1792,8 +1824,8 @@ textarea::-ms-input-placeholder {
         <h2>Únete a nuestra fuerza comercial</h2>
         <div class="stats-grid">
             <div class="stat-item">
-                <h3><span class="plus">+</span><span class="counter" data-target="10">0</span> años</h3>
-                <p>en el mercado colombiano</p>
+                <h3><span class="plus"></span><span class="counter" data-target="10">51</span> paises</h3>
+                <p>con presencia de AXA</p>
             </div>
           
             <div class="stat-item">
@@ -1820,7 +1852,7 @@ textarea::-ms-input-placeholder {
 
                 <h2 class="main-title">
     <span>¿Por qué trabajar con</span><br>
-    <span>AXA COLPATRIA</span>
+    <span>AXA COLPATRIA?</span>
 </h2>
                 <p class="description-paragraph">
                     Estamos buscando gente como tú, que quiera poner a prueba <br> sus límites mientras impulsa el progreso
@@ -1854,21 +1886,25 @@ textarea::-ms-input-placeholder {
 
             <!-- Segmento 1: Texto a la izquierda, Imagen a la derecha -->
             <div class="timeline-segment">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content-wrapper text-left animate-on-scroll" data-animation="slide-in-left">
-                    <div class="timeline-card is-text">
-                        <h3>Plan de incentivos</h3>
-                        <p>
-                            Somos reconocidos por contar con uno de los mejores Planes de Incentivos del mercado. Accederás a concursos periódicos, campeonatos trimestrales y anuales, bolsas millonarias, cupos a convenciones nacionales e internacionales y mucho más.
-                        </p>
-                    </div>
-                </div>
-                <div class="timeline-content-wrapper image-right animate-on-scroll" data-animation="slide-in-right">
-                    <div class="timeline-card is-image">
-                        <img src="images/LI01.JPG" alt="Persona trabajando en una laptop">
-                    </div>
-                </div>
-            </div>
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-wrapper text-left animate-on-scroll" data-animation="slide-in-left">
+        <div class="timeline-card is-text">
+            <h3>Plan de incentivos</h3>
+            <ul class="timeline-list">
+                <li><span class="icon-axa-fu039"></span> Contamos con uno de los mejores incentivos del mercado</li>
+                <li><span class="icon-axa-fu039"></span> Concursos periódicos</li>
+                <li><span class="icon-axa-fu039"></span> Campeonatos trimestrales y anuales</li>
+                <li><span class="icon-axa-fu039"></span> Bolsas Millonarias</li>
+                <li><span class="icon-axa-fu039"></span> Cupos a convenciones internacionales y nacionales</li>
+            </ul>
+        </div>
+    </div>
+    <div class="timeline-content-wrapper image-right animate-on-scroll" data-animation="slide-in-right">
+        <div class="timeline-card is-image">
+            <img src="images/li06.JPG" alt="Persona trabajando en una laptop">
+        </div>
+    </div>
+</div>
 
             <!-- Segmento 2: Imagen a la izquierda, Texto a la derecha -->
             <div class="timeline-segment">
@@ -1911,7 +1947,7 @@ textarea::-ms-input-placeholder {
                 <div class="timeline-dot"></div>
                 <div class="timeline-content-wrapper image-left animate-on-scroll" data-animation="slide-in-left">
                     <div class="timeline-card is-image">
-                        <img src="images/li04.JPG" alt="Oportunidades de crecimiento">
+                        <img src="images/LI01.JPG" alt="Oportunidades de crecimiento">
                     </div>
                 </div>
                 <div class="timeline-content-wrapper text-right animate-on-scroll" data-animation="slide-in-right">
@@ -1939,79 +1975,71 @@ textarea::-ms-input-placeholder {
 
             <!-- Columna Derecha - Galería de Testimonios -->
             <div class="testimonials-grid-container">
-                <!-- Testimonio 1 -->
-                <div class="testimonial-card relative" data-video-id="5kPpKet36lU">
-                    <img src="https://oswal.com.co/wp-content/uploads/2025/08/Comillas.png" alt="Comillas" class="quote-image">
-                    <div class="video-thumbnail-container relative">
-                        <iframe src="https://www.youtube.com/embed/5kPpKet36lU?controls=1&modestbranding=1&rel=0&autoplay=0&playlist=5kPpKet36lU&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                    <p class="testimonial-text">"El servicio ha transformado completamente nuestra forma de trabajar. Los resultados superaron todas nuestras expectativas y el equipo de soporte fue excepcional."</p>
-                    <a href="#" class="testimonial-author">
-                        <div class="author-info-wrapper">
-                            <img class="author-img" src="https://grace.divi-den.com/wp-content/uploads/2022/01/tina-testimonial-i-got-image1-min.jpg" onerror="this.onerror=null;this.src='https://placehold.co/40x40/5D75D9/FFFFFF?text=CR';" alt="Carlos Rodríguez">
-                            <div class="author-text-container">
-                                <span class="author-name">Carlos Rodríguez</span>
-                                <span class="seniority-text">5 años de antiguedad</span>
-                            </div>
-                        </div>
-                    </a>
+            <!-- Testimonio 1 -->
+    <div class="testimonial-card relative" data-video-id="5kPpKet36lU">
+        <img src="https://oswal.com.co/wp-content/uploads/2025/08/Comillas.png" alt="Comillas" class="quote-image">
+        <div class="video-thumbnail-container relative">
+           <!-- URL de YouTube Shorts corregida a formato embed -->
+            <iframe src="https://www.youtube.com/embed/XYvkqoUALkI?controls=1&modestbranding=1&rel=0&autoplay=0&playlist=XYvkqoUALkI&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p class="testimonial-text">"Axa Colpatria ha sido la mejor experiencia tanto a nivel profesional como personal, ha sido la mejor decisión que he tomado en mi vida, la compañía siempre me brindó el respaldo necesario."</p>
+        <a href="#" class="testimonial-author">
+            <div class="author-info-wrapper">
+                <!-- INICIALES EN LUGAR DE IMAGEN -->
+                <span class="initials-avatar">JE</span>
+                <div class="author-text-container">
+                    <span class="author-name">Jesus Ebrat</span>
+                    <span class="seniority-text">10 años de trayectoria</span>
                 </div>
+            </div>
+        </a>
+    </div>
 
-                <!-- Testimonio 2 -->
-                <div class="testimonial-card relative" data-video-id="ZYtVo-HNmRg">
-                    <img src="https://oswal.com.co/wp-content/uploads/2025/08/Comillas.png" alt="Comillas" class="quote-image">
-                    <div class="video-thumbnail-container relative">
-                        <iframe src="https://www.youtube.com/embed/ZYtVo-HNmRg?controls=1&modestbranding=1&rel=0&autoplay=0&playlist=ZYtVo-HNmRg&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                    <p class="testimonial-text">"La experiencia ha sido fantástica desde el primer día. El producto es intuitivo y potente, superando todas nuestras expectativas de eficiencia y facilidad de uso. Realmente nos ha simplificado muchos procesos diarios."</p>
-                    <a href="#" class="testimonial-author">
-                        <div class="author-info-wrapper">
-                            <img class="author-img" src="https://olena.wp-den.com/wp-content/uploads/2023/05/otestimonial10-image2.webp" onerror="this.onerror=null;this.src='https://placehold.co/40x40/5D75D9/FFFFFF?text=ML';" alt="María López">
-                            <div class="author-text-container">
-                                <span class="author-name">María López</span>
-                                <span class="seniority-text">3 años de antiguedad</span>
-                            </div>
-                        </div>
-                    </a>
+    <!-- Testimonio 2 -->
+    <div class="testimonial-card relative" data-video-id="ZYtVo-HNmRg">
+        <img src="https://oswal.com.co/wp-content/uploads/2025/08/Comillas.png" alt="Comillas" class="quote-image">
+        <div class="video-thumbnail-container relative">
+           <iframe src="https://www.youtube.com/embed/YR6cV6F25Zc?controls=1&modestbranding=1&rel=0&autoplay=0&playlist=YR6cV6F25Zc&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p class="testimonial-text">"Toda mi experiencia laboral ha sido comercial, muy feliz de mi independencia laboral y económica, en Axa he ganado convención nacional, internacionales, concursos por ventas."</p>
+        <a href="#" class="testimonial-author">
+            <div class="author-info-wrapper">
+                <!-- INICIALES EN LUGAR DE IMAGEN -->
+                <span class="initials-avatar">EC</span>
+                <div class="author-text-container">
+                    <span class="author-name">Elvinia Colmenares</span>
+                    <span class="seniority-text">3 años de antiguedad</span>
                 </div>
+            </div>
+        </a>
+    </div>
 
-                <!-- Testimonio 3 -->
-                <div class="testimonial-card relative" data-video-id="jI4ab3ZpTh8">
-                    <img src="https://oswal.com.co/wp-content/uploads/2025/08/Comillas.png" alt="Comillas" class="quote-image">
-                    <div class="video-thumbnail-container relative">
-                        <iframe src="https://www.youtube.com/embed/jI4ab3ZpTh8?controls=1&modestbranding=1&rel=0&autoplay=0&playlist=jI4ab3ZpTh8&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                    <p class="testimonial-text">"El equipo mostró un compromiso y profesionalismo inigualables, ayudándonos a escalar operaciones de manera eficiente y con resultados sorprendentes. Su capacidad para entender nuestras necesidades y ofrecer soluciones innovadoras fue clave para nuestro éxito."</p>
-                    <a href="#" class="testimonial-author">
-                        <div class="author-info-wrapper">
-                            <img class="author-img" src="https://grace.divi-den.com/wp-content/uploads/2022/01/tina-testimonial-i-got-image3-min.jpg" onerror="this.onerror=null;this.src='https://placehold.co/40x40/5D75D9/FFFFFF?text=JO';" alt="Juan Olarte">
-                            <div class="author-text-container">
-                                <span class="author-name">Juan Olarte</span>
-                                <span class="seniority-text">7 años de antiguedad</span>
-                            </div>
-                        </div>
-                    </a>
+     <!-- Testimonio 3 -->
+    <div class="testimonial-card relative" data-video-id="jI4ab3ZpTh8">
+        <img src="https://oswal.com.co/wp-content/uploads/2025/08/Comillas.png" alt="Comillas" class="quote-image">
+        <div class="video-thumbnail-container relative">
+            <!-- URL de YouTube Shorts corregida a formato embed -->
+            <iframe src="https://www.youtube.com/embed/ZKBRZbB4z3g?controls=1&modestbranding=1&rel=0&autoplay=0&playlist=ZKBRZbB4z3g&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p class="testimonial-text">"Soy intermediaria de seguros, me gradué como Plan Carrera en 2018, me gané la convención a París, mi vida ha dado un cambio de 180 grados por ser comercial."</p>
+        <a href="#" class="testimonial-author">
+            <div class="author-info-wrapper">
+                <!-- INICIALES EN LUGAR DE IMAGEN -->
+                <span class="initials-avatar">PZ</span>
+                <div class="author-text-container">
+                    <span class="author-name">Paula Zapata</span>
+                    <span class="seniority-text">7 años de antiguedad</span>
                 </div>
+            </div>
+        </a>
+    </div>
 
-                <!-- Testimonio 4 -->
-                <div class="testimonial-card relative" data-video-id="3EfSeEQMBPM">
-                    <img src="https://oswal.com.co/wp-content/uploads/2025/08/Comillas.png" alt="Comillas" class="quote-image">
-                    <div class="video-thumbnail-container relative">
-                        <iframe src="https://www.youtube.com/embed/3EfSeEQMBPM?controls=1&modestbranding=1&rel=0&autoplay=0&playlist=3EfSeEQMBPM&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                    <p class="testimonial-text">"La implementación fue sorprendentemente sencilla y los beneficios se vieron de inmediato. Recomendamos esta solución sin dudarlo, es una inversión que realmente vale la pena para cualquier equipo."</p>
-                    <a href="#" class="testimonial-author">
-                        <div class="author-info-wrapper">
-                            <img class="author-img" src="https://olena.wp-den.com/wp-content/uploads/2023/05/otestimonial10-image4.webp" onerror="this.onerror=null;this.src='https://placehold.co/40x40/5D75D9/FFFFFF?text=AG';" alt="Ana García">
-                            <div class="author-text-container">
-                                <span class="author-name">Ana García</span>
-                                <span class="seniority-text">2 años de antiguedad</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
 
-                <!-- Puedes añadir más testimonios copiando y pegando el bloque del testimonio -->
+</div>
+
+ 
+
+                
             </div>
         </div>
          <!-- Nueva Sección de Call to Action - Ahora fuera del grid de testimonios, pero dentro de section-container -->
@@ -2022,7 +2050,7 @@ textarea::-ms-input-placeholder {
         </section>
     </section>
  
- <!-- Sección Post-Testimonios -->
+ <!-- Sección Post-Testimonios 
 <section class="post-testimonios">
     <div class="post-testimonios-container">
         <div class="post-testimonios-text">
@@ -2032,7 +2060,7 @@ textarea::-ms-input-placeholder {
             <img src="images/li05.JPG" alt="Trabaja en AXA COLPATRIA">
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- Floating Form Section -->
 <div class="container" id="formContainer">  
@@ -2095,10 +2123,9 @@ textarea::-ms-input-placeholder {
             <div class="col">
                 <label for="experiencia-anios">Experiencia comercial</label>
                 <div class="flex">
-                    <select id="experiencia-anios" name="AniosExperienciaComercial">
-
-<option value="0">Años de experiencia</option>
-<option value="0">0 años</option>
+                    <select id="experiencia-anios" name="AniosExperienciaComercial" required>
+<option value="">Años de experiencia</option>
+<option value="0">sin experiencia</option>
 <option value="1">1 año</option>
 <option value="2">2 años</option>
 <option value="3">3 años</option>
@@ -2453,8 +2480,12 @@ function validarCampo(campo) {
         mensajeError = 'Este campo es obligatorio';
     } else if (campo.id === 'correo' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(campo.value)) {
         mensajeError = 'El correo no cumple con un formato válido';
-    } else if (campo.id === 'telefono' && !/^\d+$/.test(campo.value)) {
-        mensajeError = 'El teléfono debe contener solo números';
+    } else if (campo.id === 'telefono') {
+        if (!/^\d+$/.test(campo.value)) {
+            mensajeError = 'El teléfono debe contener solo números';
+        } else if (campo.value.length !== 10) {
+            mensajeError = 'El celular debe tener exactamente 10 dígitos';
+        }
     }
 
     if (mensajeError) {
