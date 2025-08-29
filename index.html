@@ -2582,16 +2582,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Cerrar formulario al hacer scroll
     window.addEventListener('scroll', function() {
+        // Si algún input, select o textarea está enfocado, no cerrar el formulario
+        if (document.activeElement && (
+            document.activeElement.tagName === 'INPUT' ||
+            document.activeElement.tagName === 'SELECT' ||
+            document.activeElement.tagName === 'TEXTAREA'
+        )) {
+            return;
+        }
+
         const currentScrollPosition = window.pageYOffset;
-        
-        // Si el usuario ha scrolleado más de 50px
         if (Math.abs(currentScrollPosition - lastScrollPosition) > 50) {
             if (formularioContainer && botonUnirme) {
                 formularioContainer.classList.add("oculto");
                 botonUnirme.classList.remove("oculto");
             }
         }
-        
         lastScrollPosition = currentScrollPosition;
     });
 
