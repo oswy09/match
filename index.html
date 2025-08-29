@@ -1804,10 +1804,10 @@ textarea::-ms-input-placeholder {
     line-height: 1.5;
 }
 
-/* Mantener tamaño fijo del formulario flotante en pantallas de portátil y escritorio y ocultar scroll horizontal */
-@media (min-width: 769px) {
+/* Mantener tamaño fijo del formulario flotante en pantallas de portátil y escritorio */
+@media (min-width: 1200px) {
   .container {
-    max-height: 90vh !important;
+    max-height: 70vh !important;
     min-height: 400px;
     overflow: hidden;
     display: flex;
@@ -1815,7 +1815,6 @@ textarea::-ms-input-placeholder {
   }
   .container form {
     overflow-y: auto;
-    overflow-x: hidden; /* Oculta el scroll horizontal */
     flex: 1 1 auto;
     max-height: 70vh;
     min-height: 300px;
