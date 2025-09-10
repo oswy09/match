@@ -1424,7 +1424,7 @@ select {
         transform: translateY(0);
         transition: transform 0.3s ease-in-out;
          /* MANTENER scroll vertical en móvil */
-         overflow-y: auto !important; /* Permitir scroll vertical */
+        overflow-y: auto !important; /* Permitir scroll vertical */
         overflow-x: hidden; /* Sin scroll horizontal */
          
 
@@ -1485,7 +1485,8 @@ select {
 
     .container form {
         flex: 1;
-        overflow-y: hidden;
+        overflow-y: auto !important; /* CAMBIAR: era hidden, ahora auto */
+        overflow-x: hidden; /* Sin scroll horizontal */
         padding: 2px 20px;
         margin-bottom: 20px;
         -webkit-overflow-scrolling: touch; /* Para mejor scroll en iOS */
@@ -1505,7 +1506,88 @@ select {
     }
 
     .form-group input,
-    .form-group select {
+    .form-group select {/* Corregir el CSS para móvil - PERMITIR scroll vertical */
+@media (max-width: 768px) {  
+    .container {
+        width: 90vw !important;
+        max-width: 90vw !important;
+        left: 5vw !important;
+        right: 5vw !important;
+        bottom: 0;
+        height: 90vh !important;
+        max-height: 90vh !important;
+        min-height: 90vh !important;
+        background-color: white;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px 20px 0 0;
+        padding: 0;
+        margin: 0;
+        transform: translateY(0);
+        transition: transform 0.3s ease-in-out;
+        /* MANTENER scroll vertical en móvil */
+        overflow-y: auto !important; /* Permitir scroll vertical */
+        overflow-x: hidden; /* Sin scroll horizontal */
+    }
+
+    .container form {
+        flex: 1;
+        overflow-y: auto !important; /* CAMBIAR: era hidden, ahora auto */
+        overflow-x: hidden; /* Sin scroll horizontal */
+        padding: 2px 20px;
+        margin-bottom: 20px;
+        -webkit-overflow-scrolling: touch; /* Para mejor scroll en iOS */
+    }
+
+    /* Mantener estilos de scrollbar para móvil */
+    .container::-webkit-scrollbar-thumb {
+        background-color: #99a5b6;  
+        border-radius: 4px;
+    }
+
+    .container::-webkit-scrollbar-track {
+        background-color: #f0f0f0;  
+    }
+
+    .container::-webkit-scrollbar {
+        width: 8px;  
+    }
+
+    .header-form {
+        position: sticky;
+        top: 0;
+        background-color: #4976BA;
+        color: white;
+        z-index: 20;
+        padding: 8px 25px;
+        flex-shrink: 0;  
+        border-radius: 20px 20px 0 0;
+        width: auto;    
+        margin-left: 0;   
+        margin-top: 0;    
+        text-align: center;  
+        line-height: normal;
+    }
+}
+
+/* Mantener sin scroll para portátil y escritorio */
+@media (min-width: 1024px) {
+    .container {
+        overflow: hidden !important; /* Sin scroll en portátil/escritorio */
+        max-height: 95vh !important;
+    }
+
+    .container form {
+        overflow: hidden !important; /* Sin scroll interno en portátil/escritorio */
+        padding-bottom: 0.5rem;
+    }
+
+    .header-form {
+        padding: 0.7rem 1.2rem;
+        line-height: normal;
+    }
+}
         width: 100%;
     }
 }
