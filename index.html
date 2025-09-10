@@ -1507,31 +1507,28 @@ select {
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
-    .container {
-        overflow: hidden !important;
-        max-height: 85vh !important;
-        
-    }
-    
-    .container form {
-        overflow: hidden !important;
-        padding-bottom: 0.5rem; /* Reducir padding inferior */
-    }
+@media (min-width: 1024px) {
+  /*
+   * Estilos para pantallas de 1024px en adelante, como computadoras portátiles y de escritorio.
+   * Esto reemplaza las dos consultas de medios originales.
+   */
+  .container {
+    overflow: hidden;
+    max-height: 85vh;
+  }
 
-    .header-form
-    {
-        padding: 0.7rem 1.2rem;
-        line-height: normal;
-    }
+  .container form {
+    overflow: hidden;
+    /* Comentario original: Reducir padding inferior */
+    padding-bottom: 0.5rem;
+  }
+
+  .header-form {
+    padding: 0.7rem 1.2rem;
+    line-height: normal;
+  }
 }
 
-@media (min-width: 1200px) {
-    .container {
-        max-height: 85vh !important;
-      
-    }
-}
 
 
 /* ================================ */
@@ -1833,7 +1830,7 @@ textarea::-ms-input-placeholder {
 /* Mantener tamaño fijo del formulario flotante en pantallas de portátil y escritorio */
 @media (min-width: 1200px) {
   .container {
-    max-height: 70vh !important;
+    
     min-height: 400px;
     overflow: hidden;
     display: flex;
