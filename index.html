@@ -1423,6 +1423,9 @@ select {
         margin: 0;
         transform: translateY(0);
         transition: transform 0.3s ease-in-out;
+         /* MANTENER scroll vertical en móvil */
+         overflow-y: auto !important; /* Permitir scroll vertical */
+        overflow-x: hidden; /* Sin scroll horizontal */
          
 
     }
@@ -1514,7 +1517,7 @@ select {
    */
   .container {
     overflow: hidden;
-    max-height: 95vh;
+    max-height: 95vh !important;
   }
 
   .container form {
@@ -1830,7 +1833,7 @@ textarea::-ms-input-placeholder {
 /* Mantener tamaño fijo del formulario flotante en pantallas de portátil y escritorio */
 @media (min-width: 1200px) {
   .container {
-    
+    max-height: 95vh;
     min-height: 400px;
     overflow: hidden;
     display: flex;
